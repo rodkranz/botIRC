@@ -3,6 +3,7 @@ package setting
 import (
 	"fmt"
 	
+	log "gopkg.in/clog.v1"
 	"gopkg.in/ini.v1"
 	"gopkg.in/urfave/cli.v2"
 )
