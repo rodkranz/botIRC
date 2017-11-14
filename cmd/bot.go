@@ -18,13 +18,14 @@ import (
 	"github.com/rodkranz/botIRC/pkg/setting"
 )
 
+// BotCmd Command to star bot
 var BotCmd = &cli.Command{
 	Name:   "bot",
 	Usage:  "start bot",
 	Action: runBot,
 }
 
-func runBot(c *cli.Context) error {
+func runBot(_ *cli.Context) error {
 	// Create Log file
 	f, err := os.Create(setting.LogFile)
 	if err != nil {
