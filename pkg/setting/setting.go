@@ -2,8 +2,7 @@ package setting
 
 import (
 	"fmt"
-
-	log "gopkg.in/clog.v1"
+	
 	"gopkg.in/ini.v1"
 	"gopkg.in/urfave/cli.v2"
 )
@@ -11,47 +10,42 @@ import (
 var (
 	AppName string
 	AppVer  string
-
+	
 	Auth struct {
 		Username string
 		Nickname string
 		Password string
 	}
-
+	
 	Server struct {
 		Host     string
 		Port     int
 		Channels []string
 	}
-
+	
 	AI struct {
 		Brain string
 	}
-
+	
 	LogFile string
-
+	
 	Cfg *ini.File
 )
 
 func Bootstrap(_ *cli.Context) error {
-	err := log.New(log.CONSOLE, log.ConsoleConfig{})
-	if err != nil {
-		return err
-	}
-
 	//B Load configurations
 	Cfg, err := ini.Load("config/app.ini")
 	if err != nil {
 		log.Fatal(0, "Fail to parse 'config/app.ini': %v", err)
 		return err
 	}
-
+	
 	// Auth configurations
 	sec := Cfg.Section("AUTHENTICATION")
 	Auth.Username = sec.Key("username").MustString("GoLangBot")
 	Auth.Nickname = sec.Key("nickname").MustString("gobot")
 	Auth.Password = sec.Key("password").MustString("")
-
+	
 	// Server configurations
 	sec = Cfg.Section("SERVER")
 	Server.Host = sec.Key("hostname").MustString("irc.freenode.net")
@@ -61,11 +55,11 @@ func Bootstrap(_ *cli.Context) error {
 	for _, c := range scs {
 		Server.Channels = append(Server.Channels, c)
 	}
-
+	
 	AI.Brain = Cfg.Section("AI").Key("brain").MustString("brain")
-
+	
 	logFile := Cfg.Section("LOG").Key("output").MustString("log/log_%s.log")
 	LogFile = fmt.Sprintf(logFile, Server.Host)
-
+	
 	return nil
 }
