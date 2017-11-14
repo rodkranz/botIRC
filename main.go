@@ -5,6 +5,7 @@ import (
 	"os"
 	"runtime"
 
+	log "gopkg.in/clog.v1"
 	"gopkg.in/urfave/cli.v2"
 
 	"github.com/rodkranz/botIRC/cmd"
@@ -13,6 +14,11 @@ import (
 
 func init() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
+	err := log.New(log.CONSOLE, log.ConsoleConfig{})
+	if err != nil {
+		fmt.Printf("error to start logs: %v", err)
+		os.Exit(1)
+	}
 }
 
 func main() {

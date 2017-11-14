@@ -34,11 +34,6 @@ var (
 )
 
 func Bootstrap(_ *cli.Context) error {
-	err := log.New(log.CONSOLE, log.ConsoleConfig{})
-	if err != nil {
-		return err
-	}
-
 	//B Load configurations
 	Cfg, err := ini.Load("config/app.ini")
 	if err != nil {
