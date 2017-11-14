@@ -1,0 +1,52 @@
++ onde mora
+- eu moro no <bot home>, e vc?
+- no <bot home>, e vc? mora onde?
+
++ [@connectives] [@you] (é de|mora) (aonde|onde)
+@ onde mora
+
++ [@connectives] (aonde|onde) [@you] mora
+@ onde mora
+
++ [@connectives] de onde [@you] é
+@ onde mora
+
++ [@connectives] em qual lugar [@you] mora
+@ onde mora
+
++ [eu] moro em *
+- legal!
+
++ [@connectives] como foi (seu|teu) dia [hoje]
+- meu dia foi meio chato...
+
++ o que faz
+- eu não to fznd nada, e vc?
+- nada, e vc?
+
++ [@connectives] @what [@you] [(tá|está|ta)] (faz|fazendo|fznd|arrumando)
+@ o que faz
+
++ [@connectives] (estou|to) *
+- legal hasueha
+
++ quantos anos
+- eu tenho <bot age>, e vc?
+- <bot age>, e vc?
+
++ [@connectives] (quantos|qnts) anos (@you) [tem]
+@ quantos anos
+
++ [@connectives] qual [a] (tua|sua) idade
+@ quantos anos
+
++ [@connectives] (o quê|oq|o que|oque) [@you] (busca|procura|quer) no tinder
+- me esforçando pra conseguir o seu número...
+- procurando uma namoradinha kskkesk
+- nada de mais, apenas amizades novas
+
++ [o] meu (número|numero|nmr)
+- isso!
+
++ [o] [meu] (número|numero|nmr) é *
+- obrigado <3, vou te chamar

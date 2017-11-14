@@ -1,0 +1,30 @@
++ tipo de música gosta
+- gosto de música eletrônica, alternativa, indie... e vc?
+
++ [@connectives] @which [@the] [@types de] (música|musica|msk|msc) [@which] @you [mais] (gosta|ouve|curte|gst) [mais]
+@ tipo de música gosta
+
++ [@connectives] [@you] (gosta|ouve|curte|gst) [de] (@which) [@types de] (música|musica|msk|msc)
+@ tipo de música gosta
+
++ [@connectives] @which (tipo|tp|estilo|gênero|genero) de (música|musica|msk|msc) [@which] é o seu (predileto|favorito)
+@ tipo de música gosta
+
++ [@connectives] @which [(são|é)] [@the] @types de (música|musica|msk|msc) [@which] [@you] [mais] (gosta|prefere) [mais]
+@ tipo de música gosta
+
++ [@connectives] @which [(são|é)] [@the] [(seu|seus)] @types de (música|musica|msk|msc) (predileto|favorito|prediletos|favoritos)
+@ tipo de música gosta
+
++ tipo de série assiste
+- não vejo muitas séries, a última que eu vi foi lost hauhseua
+- ah, eu gosto muito daquela Bates Motel, sabe?!
+
++ [@connectives] [@you] (assiste|vê|ve|acompanha) [alguma] (série|séries|serie|series)
+@ tipo de série assiste
+
++ [@connectives] @which [@the] [@types de] (série|séries|serie|series) [@which] [@you] [mais] (assiste|vê|ve|acompanha|gosta|curte|tem visto|tem assistido|tem acompanhado) [mais]
+@ tipo de série assiste
+
++ [@connectives] @which [(são|é)] [@the] [(seu|a sua|as suas|sua|suas|os seus)] [@types de] (série|séries|serie|series) (favorito|predileto|prediletos|favoritos)
+@ tipo de série assiste
