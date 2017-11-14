@@ -3,7 +3,7 @@ package join
 import (
 	"fmt"
 	"io"
-	
+
 	"github.com/rodkranz/botIRC/pkg/command"
 )
 
@@ -21,7 +21,7 @@ func (j Join) Description() string {
 
 func (j Join) Run(p command.Payload, w io.Writer) {
 	command.Message{
-		Text: fmt.Sprintf("JOIN #%s", p.Text),
+		Text:  fmt.Sprintf("JOIN #%s", p.Text),
 		Parse: command.ParseStyleCommand,
 	}.Send(w)
 }

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 	"runtime"
-	
+
 	"gopkg.in/urfave/cli.v2"
-	
+
 	"github.com/rodkranz/botIRC/cmd"
 	"github.com/rodkranz/botIRC/pkg/setting"
 )
@@ -31,12 +31,12 @@ func main() {
 			cmd.BotCmd,
 		},
 	}
-	
+
 	app.Flags = append(app.Flags, []cli.Flag{}...)
 	if len(os.Args) == 1 {
 		os.Args = append(os.Args, cmd.BotCmd.Name)
 	}
-	
+
 	if err := app.Run(os.Args); err != nil {
 		fmt.Printf("%v", err)
 		os.Exit(1)

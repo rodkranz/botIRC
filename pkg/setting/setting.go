@@ -19,11 +19,11 @@ var (
 	}
 
 	Server struct {
-		Host    string
-		Port    int
+		Host     string
+		Port     int
 		Channels []string
 	}
-	
+
 	AI struct {
 		Brain string
 	}
@@ -38,7 +38,7 @@ func Bootstrap(_ *cli.Context) error {
 	if err != nil {
 		return err
 	}
-	
+
 	//B Load configurations
 	Cfg, err := ini.Load("config/app.ini")
 	if err != nil {
@@ -61,7 +61,7 @@ func Bootstrap(_ *cli.Context) error {
 	for _, c := range scs {
 		Server.Channels = append(Server.Channels, c)
 	}
-	
+
 	AI.Brain = Cfg.Section("AI").Key("brain").MustString("brain")
 
 	logFile := Cfg.Section("LOG").Key("output").MustString("log/log_%s.log")

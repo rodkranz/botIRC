@@ -19,7 +19,7 @@ func ParseLine(line string) (pl Payload) {
 	if len(line) == 0 {
 		return
 	}
-	
+
 	switch {
 	case strings.HasPrefix(line, ":"):
 		regexLn := regexp.MustCompile(`\:([^\s]+)[\ ]([^\s]+)[\ ]([^\s]+)\ \:(.*)`)
@@ -29,13 +29,13 @@ func ParseLine(line string) (pl Payload) {
 			pl.Type = cutLine[2]
 			pl.Channel = cutLine[3]
 			pl.Text = cutLine[4]
-			
+
 			regServer := regexp.MustCompile(`(.*)!~`)
 			cutServer := regServer.FindStringSubmatch(pl.Username)
 			if len(cutServer) >= 1 {
 				pl.Username = cutServer[1]
 			}
-			
+
 			if cutLine[4][0:1] == "!" {
 				regCmd := regexp.MustCompile(`([^\s]+)[\ ](.*)`)
 				cutCmd := regCmd.FindStringSubmatch(pl.Text[1:])
@@ -54,6 +54,6 @@ func ParseLine(line string) (pl Payload) {
 			pl.Text = cutLine[2]
 		}
 	}
-	
+
 	return pl
 }

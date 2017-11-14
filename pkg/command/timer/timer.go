@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 	"time"
-	
+
 	"github.com/rodkranz/botIRC/pkg/command"
 )
 
@@ -34,12 +34,12 @@ func (t Timer) Verify(p command.Payload) bool {
 		"!hora",
 		"!horas",
 	}
-	
+
 	for _, word := range available {
 		if word == p.Text {
 			return true
 		}
 	}
-	
+
 	return false
 }

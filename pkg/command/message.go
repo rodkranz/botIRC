@@ -2,7 +2,7 @@ package command
 
 import (
 	"io"
-	
+
 	log "gopkg.in/clog.v1"
 )
 

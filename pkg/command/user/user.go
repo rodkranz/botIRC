@@ -3,7 +3,7 @@ package user
 import (
 	"fmt"
 	"io"
-	
+
 	"github.com/rodkranz/botIRC/pkg/command"
 )
 
