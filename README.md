@@ -1,4 +1,4 @@
-# Bot IRC [![Build Status](https://travis-ci.org/rodkranz/botIRC.svg?branch=master)](https://travis-ci.org/rodkranz/botIRC)
+# Bot IRC [![Build Status](https://travis-ci.org/rodkranz/botIRC.svg?branch=master)](https://travis-ci.org/rodkranz/botIRC) [![Go Report Card](https://goreportcard.com/badge/github.com/rodkranz/botIRC)](https://goreportcard.com/report/github.com/rodkranz/botIRC)
 
 ---
 Simple AI for boot IRC
